@@ -10,7 +10,8 @@
       kl = "log --show-signature";
     };
     signing = {
-      key = "$HOME/.ssh/luxzi";
+      key = "/home/luxzi/.ssh/luxzi";
+      signByDefault = true;
     };
     extraConfig = {
       init.defaultBranch = "main";
