@@ -23,7 +23,7 @@ To use AMD graphics cards:
 
 ## Deployment
 
-If you would like to use these configuration files as is, you can install a NixOS system by:
+If you would like to use these configuration files as is:
 
 - Mount and format desired filesystems (as described in the NixOS manual).
 - Run the following git clone command while also making sure to replace `<your-name>` with your desired username:
