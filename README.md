@@ -7,24 +7,19 @@ Configured for KDE Plasma Wayland on Nvidia.
 To change your username or any additional user settings, you must:
 
 - Create `./nixos/users/<your-name>.nix`, this can be copied from `luxzi.nix` in the same directory.
-- Import the newly created file in './nixos/configuration.nix'.
+- Import the newly created file in `./nixos/configuration.nix`.
 - Edit `./home-manager/home.nix` to the corresponding username and home directory.
 
 ## Adjusting hardware configuration
 
----
-
-**NOTE**
-
-If you use an older Nvidia graphics card, you do not need to modify `./nixos/hardware/nvidia.nix`.
-Although if you use a newer Nvidia graphics card, it is advised to enable `open` to use the open-source kernel driver.
+> [!NOTE]
+> If you use an older Nvidia graphics card (i.e. before RTX 20 series), you do not need to modify `./nixos/hardware/nvidia.nix`.
+> Although if you use a newer Nvidia graphics card, it is advised to enable `open` to use the open-source kernel driver.
 
 To use AMD graphics cards:
 
 - Create `./nixos/hardware/amd.nix`
 - Add `services.xserver.videoDrivers = [ "amdgpu" ];`
-
----
 
 ## Deployment
 
