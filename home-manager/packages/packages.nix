@@ -17,5 +17,6 @@
      tree
      vesktop
      kitty
+     prismlauncher
   ];
 }
