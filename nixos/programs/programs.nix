@@ -25,5 +25,6 @@
     wl-clipboard
     jdk17
     jre8
+    python3
   ];
 }
