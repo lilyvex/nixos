@@ -5,6 +5,7 @@
     [
       ./zsh.nix
       ./git.nix
+      ./emacs.nix
     ];
 
   home.packages = with pkgs; [
