@@ -26,5 +26,6 @@
     jdk17
     jre8
     python3
+    clang-tools
   ];
 }
