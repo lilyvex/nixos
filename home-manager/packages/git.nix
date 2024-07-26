@@ -16,6 +16,7 @@
     extraConfig = {
       init.defaultBranch = "main";
       gpg.format = "ssh";
+      core.symlinks = true;
     };
   };
 }

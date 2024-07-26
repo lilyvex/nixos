@@ -52,7 +52,6 @@
   programs.oh-my-posh = {
     enable = true;
     enableZshIntegration = true;
-    # useTheme = "catppuccin_mocha";
     settings = {
         "$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json";
         palette = {
@@ -63,13 +62,15 @@
               white = "#FFFFFF";
               text = "#494D64";
         };
+        console_title_template = "{{.Folder}}{{if .Root}} :: root{{end}} :: {{.Shell}}";
         blocks = [
           {
             alignment = "left";
+            newline = true;
             segments = [
               {
                 background = "p:blue";
-                foreground = "p:wight";
+                foreground = "p:white";
                 powerline_symbol = builtins.fromJSON '' "\ue0b4" '';
                 leading_diamond = builtins.fromJSON '' "\ue0b6" '';
                 style = "diamond";
