@@ -1,0 +1,3 @@
+[submodule "home-manager/packages/doom-emacs/.emacs.d"]
+	path = home-manager/packages/doom-emacs/.emacs.d
+	url = https://github.com/doomemacs/doomemacs
