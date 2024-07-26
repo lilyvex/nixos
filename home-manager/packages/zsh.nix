@@ -17,6 +17,7 @@
       gl-clean = "sudo nix-collect-garbage --delete-old && nix-collect-garbage --delete-old && home-manager remove-generations";
       snv = "sudo -E nvim";
       sen = "sudo -E";
+      emacs-config = "emacs --chdir $HOME/.doom.d &";
     };
 
     zplug = {
