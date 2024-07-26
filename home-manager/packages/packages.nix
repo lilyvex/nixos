@@ -18,5 +18,7 @@
      vesktop
      kitty
      prismlauncher
+     fzf
+     zoxide
   ];
 }
