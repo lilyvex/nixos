@@ -17,6 +17,6 @@
   home.file.".doom.d" = {
     source = ./doom-emacs/.doom.d;
     recursive = true;
-    onChange = builtins.getEnv "HOME" + "/.emacs.d/bin/doom sync";
+    onChange = "${config.home.homeDirectory}/.emacs.d/bin/doom sync";
   };
 }
