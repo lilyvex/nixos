@@ -6,6 +6,7 @@
       ./zsh.nix
       ./git.nix
       ./emacs.nix
+      ./kitty.nix
     ];
 
   home.packages = with pkgs; [
@@ -16,7 +17,6 @@
      firefox
      tree
      vesktop
-     kitty
      prismlauncher
      fzf
      zoxide
