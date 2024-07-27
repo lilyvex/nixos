@@ -63,7 +63,6 @@
               white = "#FFFFFF";
               text = "#494D64";
         };
-        console_title_template = "{{.Folder}}{{if .Root}} :: root{{end}} :: {{.Shell}}";
         blocks = [
           {
             alignment = "left";
