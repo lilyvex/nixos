@@ -18,5 +18,6 @@
     source = ./doom-emacs/.doom.d;
     recursive = true;
     onChange = "${config.home.homeDirectory}/.emacs.d/bin/doom sync";
+    force = true;
   };
 }

@@ -28,5 +28,7 @@
     python3
     clang-tools
     clang
+    libtool
+    libvterm
   ];
 }
