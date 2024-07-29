@@ -54,6 +54,7 @@
 (package! org-view-mode)
 (package! org-superstar)
 (package! lsp-ui)
+(package! svelte-mode)
 
 (setq lsp-log-io t)
 (add-hook 'org-mode-hook
