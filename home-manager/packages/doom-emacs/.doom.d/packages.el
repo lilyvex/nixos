@@ -55,6 +55,7 @@
 (package! org-superstar)
 (package! lsp-ui)
 (package! svelte-mode)
+(package! typescript-mode)
 
 (setq lsp-log-io t)
 (add-hook 'org-mode-hook
