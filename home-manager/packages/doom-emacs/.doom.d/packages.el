@@ -53,6 +53,9 @@
 (package! catppuccin-theme)
 (package! org-view-mode)
 (package! org-superstar)
+(package! lsp-ui)
+
+(setq lsp-log-io t)
 (add-hook 'org-mode-hook
           (lambda ()
             (org-superstar-mode 1)))
