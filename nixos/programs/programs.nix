@@ -30,5 +30,7 @@
     clang
     libtool
     libvterm
+    pkg-config
+    openssl
   ];
 }
