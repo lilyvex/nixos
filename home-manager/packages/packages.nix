@@ -20,5 +20,6 @@
      prismlauncher
      fzf
      zoxide
+     tor-browser
   ];
 }
