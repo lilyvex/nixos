@@ -21,5 +21,6 @@
      fzf
      zoxide
      tor-browser
+     nix-search-cli
   ];
 }
