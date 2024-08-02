@@ -4,7 +4,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware/hardware.nix
-      ./environments/plasma-wayland.nix
+      # ./environments/plasma-wayland.nix
+      ./environments/hyprland.nix
       ./users/luxzi.nix
       ./services/services.nix
       ./programs/programs.nix

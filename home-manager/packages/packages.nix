@@ -7,6 +7,7 @@
       ./git.nix
       ./emacs.nix
       ./kitty.nix
+      ./hyprland/hyprland.nix
     ];
 
   home.packages = with pkgs; [
@@ -22,5 +23,7 @@
      zoxide
      tor-browser
      nix-search-cli
+     mpv
+     dolphin
   ];
 }
