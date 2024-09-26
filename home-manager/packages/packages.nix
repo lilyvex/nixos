@@ -19,6 +19,10 @@
      tor-browser
      nix-search-cli
      mpv
-     dolphin
+     element-desktop
+     mission-center
+     nvtop
   ];
+
+  nixpkgs.config.allowUnfree = true;
 }

@@ -10,4 +10,6 @@
       ./libinput.nix
       ./networkmanager.nix
     ];
+
+    services.flatpak.enable = true;
 }
