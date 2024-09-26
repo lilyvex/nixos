@@ -16,6 +16,7 @@
     extraConfig = {
       init.defaultBranch = "main";
       gpg.format = "ssh";
+      gpg.ssh.allowedSignersFile = "/home/luxzi/.ssh/allowed_signers";
       core.symlinks = true;
     };
   };
