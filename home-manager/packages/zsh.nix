@@ -48,97 +48,52 @@
     '';
   };
 
-  programs.oh-my-posh = {
+  programs.starship = {
     enable = true;
-    enableZshIntegration = true;
     settings = {
-        "$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json";
-        palette = {
-              os = "#ACB0BE";
-              pink = "#F5BDE6";
-              lavender = "#B7BDF8";
-              blue =  "#8AADF4";
-              white = "#FFFFFF";
-              text = "#494D64";
-        };
-        blocks = [
-          {
-            alignment = "left";
-            newline = true;
-            segments = [
-              {
-                background = "p:blue";
-                foreground = "p:white";
-                powerline_symbol = builtins.fromJSON '' "\ue0b4" '';
-                leading_diamond = builtins.fromJSON '' "\ue0b6" '';
-                style = "diamond";
-                template = "{{.Icon}} ";
-                type = "os";
-              }
-              {
-                background = "p:blue";
-                foreground = "p:text";
-                powerline_symbol = builtins.fromJSON '' "\ue0b4" '';
-                style = "diamond";
-                template = "{{ .UserName }}@{{ .HostName }}";
-                type = "session";
-              }
-              {
-                background = "p:pink";
-                foreground = "p:text";
-                properties = {
-                  folder_icon = "..\ue5fe..";
-                  home_icon = "~";
-                  style = "folder";
-                };
-                powerline_symbol = builtins.fromJSON '' "\ue0b4" '';
-                style = "powerline";
-                template = builtins.fromJSON '' " \udb81\udf70 {{ .Path }}" '';
-                type = "path";
-              }
-              {
-                background = "p:blue";
-                foreground = "p:text";
-                powerline_symbol = builtins.fromJSON '' "\ue0b4" '';
-                template = builtins.fromJSON '' "{{if .Env.IN_NIX_SHELL}} \uf313 in nix-shell{{else}}{{end}}" '';
-                style = "diamond";
-                type = "text";
-              }
-              {
-                background = "p:lavender";
-                foreground = "p:text";
-                style = "powerline";
-                properties = {
-                  branch_icon = builtins.fromJSON '' "\ue725 " '';
-                  cherry_pick_icon = builtins.fromJSON '' "\ue29b " '';
-                  commit_icon = builtins.fromJSON '' "\uf417 " '';
-                  fetch_status = true;
-                  fetch_upstream_icon = true;
-                  fetch_bare_info = true;
-                  merge_icon = builtins.fromJSON '' "\ue727 " '';
-                  no_commits_icon = builtins.fromJSON '' "\uf0c3 " '';
-                  rebase_icon = builtins.fromJSON '' "\ue728 " '';
-                  revert_icon = builtins.fromJSON '' "\uf0e2 " '';
-                  tag_icon = builtins.fromJSON '' "\uf412 " '';
-                };
-                powerline_symbol = builtins.fromJSON '' "\ue0b4" '';
-                template = " {{ .HEAD }}{{ .Working }}";
-                type = "git";
-              }
-              {
-                background = "#f38ba8";
-                foreground = "p:text";
-                powerline_symbol = builtins.fromJSON '' "\ue0b4" '';
-                template = builtins.fromJSON '' "{{if eq .Code 0}}{{else}} \uea87 {{.Code}}<#f38ba8,transparent>\ue0b4{{end}}" '';
-                type = "status";
-                style = "diamond";
-              }
-            ];
-            type = "prompt";
-          }
-        ];
-        final_space = true;
-        version = 2;
+      format = "$username$hostname$directory$git_branch$git_state$git_status$nix_shell$cmd_duration$line_break$python$character";
+
+      directory = {
+        style = "blue";
+      };
+
+      character = {
+        success_symbol = "[❯](white)";
+        error_symbol = "[❯](red)";
+        vimcmd_symbol = "[❮](green)";
+      };
+
+      git_branch = {
+        format = "[$branch]($style)";
+        style = "green";
+      };
+
+      git_status = {
+        format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)";
+        style = "cyan";
+        conflicted = "!";
+        untracked = "​u";
+        modified = "​*";
+        staged = "​+";
+        renamed = "r";
+        deleted = "d";
+        stashed = "≡";
+      };
+
+      git_state = {
+        format = "\([$state( $progress_current/$progress_total)]($style)\) ";
+        style = "bright-black";
+      };
+
+      cmd_duration = {
+        format = "[$duration]($style) ";
+        style = "yellow";
+      };
+
+      python = {
+        format = "[$virtualenv]($style) ";
+        style = "bright-black";
       };
     };
+  };
 }
