@@ -10,14 +10,13 @@
       kl = "log --show-signature";
     };
     signing = {
-      key = "/home/luxzi/.ssh/luxzi";
+      key = "C90237A70F2FDD53";
       signByDefault = true;
     };
     extraConfig = {
       init.defaultBranch = "main";
-      gpg.format = "ssh";
-      gpg.ssh.allowedSignersFile = "/home/luxzi/.ssh/allowed_signers";
       core.symlinks = true;
+      commit.gpgsign = true;
     };
   };
 }
