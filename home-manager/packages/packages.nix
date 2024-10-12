@@ -22,6 +22,7 @@
      element-desktop
      mission-center
      nvtop
+     alacritty
   ];
 
   nixpkgs.config.allowUnfree = true;
