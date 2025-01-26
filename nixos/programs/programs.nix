@@ -14,7 +14,7 @@
     curl
     git
     neovim
-    fira-code-nerdfont
+    nerd-fonts.fira-code
     cmake
     ninja
     libgcc

@@ -3,10 +3,9 @@
 {
   programs.kitty = {
     enable = true;
-    theme = "Catppuccin-Mocha";
     font = {
       name = "FiraCode Nerd Font";
-      package = pkgs.fira-code-nerdfont;
+      package = pkgs.nerd-fonts.fira-code;
       size = 14;
     };
     settings = {

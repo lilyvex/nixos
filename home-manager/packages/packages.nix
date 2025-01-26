@@ -23,6 +23,7 @@
      mission-center
      nvtop
      alacritty
+     nerd-fonts.fira-code
   ];
 
   nixpkgs.config.allowUnfree = true;
