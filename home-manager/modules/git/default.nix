@@ -15,7 +15,7 @@ in {
       lfs.enable = true;
       extraConfig = {
         user = {
-          name = "Lily Vex";
+          name = "lily";
           email = "lesson085@gmail.com";
           signingKey = "Lily Vex";
         };
