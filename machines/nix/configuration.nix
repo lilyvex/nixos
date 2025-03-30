@@ -25,12 +25,10 @@
   ];
   lily = {
     users.lily.enable = true;
-    laptop.enable = true;
     common.enable = true;
     containers = {
       enable = true;
-      podman = true;
-      # docker = false;
+      docker = true;
     };
     nvidia.enable = true;
     desktop = {
@@ -64,7 +62,6 @@
       platformOptimizations.enable = true;
       localNetworkGameTransfers.openFirewall = true;
       gamescopeSession.enable = true;
-      extraCompatPackages = let gamePkgs = inputs.nix-gaming.packages.${pkgs.hostPlatform.system}; in [pkgs.proton-ge-bin gamePkgs.northstar-proton];
     };
   };
 

@@ -15,9 +15,9 @@ in {
       lfs.enable = true;
       extraConfig = {
         user = {
-          name = "Lily";
-          email = "Caznix01@gmail.com";
-          signingKey = "Caznix";
+          name = "Lily Vex";
+          email = "lesson085@gmail.com";
+          signingKey = "Placeholder";
         };
         commit.gpgsign = true;
         init.defaultBranch = "main";

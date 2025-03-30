@@ -8,13 +8,10 @@
   };
   lily = {
     hyprland.enable = true;
-    ghostty.enable = true;
+    kitty.enable = true;
     neovim.enable = true;
     rofi.enable = true;
-    vscode.enable = true;
-    zed.enable = true;
     waybar.enable = true;
-    chromium.enable = true;
   };
   home.packages = with pkgs; [
     vesktop

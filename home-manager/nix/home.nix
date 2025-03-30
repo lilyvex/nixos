@@ -42,7 +42,7 @@
       # Or define it inline, for example:
       # (final: prev: {
       #   hi = final.hello.overrideAttrs (oldAttrs: {
-      #     patches = [ ./change-hello-to-hi.patch ];
+      #     patches = [ ./<D-g>change-hello-to-hi.patch ];
       #   });
       # })
     ];
@@ -57,15 +57,12 @@
     username = "lily";
     homeDirectory = "/home/lily";
     packages = with pkgs; # installs a package
-    
       [
         vesktop
+	inputs.zen-browser.packages."${system}".default
         (prismlauncher.override {
           jdks = [jdk23 jdk8 jdk17 jdk21];
         })
-        itch
-        inputs.nix-gaming.packages.${pkgs.system}.viper
-        kdePackages.kate
       ];
   };
 
