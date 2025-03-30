@@ -1,0 +1,53 @@
+{
+  config,
+  lib,
+  ...
+}: let
+  cfg = config.lily.zsh;
+in {
+  options.lily.zsh = {
+    enable = lib.mkEnableOption "activate zsh";
+  };
+
+  config = lib.mkIf cfg.enable {
+    programs.zsh = {
+      enable = true;
+      autocd = true;
+      autosuggestion.enable = true;
+      autosuggestion.strategy = [
+        "completion"
+        "history"
+      ];
+      shellAliases = {
+        nix-switch = "sudo nixos-rebuild switch --flake $HOME/.dotfiles";
+        ls = "eza";
+        cd = "z";
+      };
+      syntaxHighlighting.enable = true;
+
+      antidote = {
+        enable = true;
+        plugins = [
+          "zsh-users/zsh-autosuggestions"
+          "mattmc3/ez-compinit"
+          "zdharma-continuum/fast-syntax-highlighting kind:defer"
+          "zsh-users/zsh-completions kind:fpath path:src"
+          "getantidote/use-omz" # handle OMZ dependencies
+          "ohmyzsh/ohmyzsh path:lib" # load OMZ's library
+          "ohmyzsh/ohmyzsh path:plugins/colored-man-pages" # load OMZ plugins
+          "ohmyzsh/ohmyzsh path:plugins/magic-enter"
+        ];
+      };
+    };
+    programs.zoxide = {
+      enable = true;
+    };
+    programs.starship.enable = true;
+    programs.eza = {
+      enable = true;
+      colors = "always";
+      icons = "always";
+      git = true;
+    };
+  };
+}
