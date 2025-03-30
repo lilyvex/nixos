@@ -17,12 +17,8 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
     ../applications/git.nix
-    ../applications/chromium.nix
-    ../applications/git.nix
     ../applications/zsh.nix
     ../applications/direnv.nix
-    ../applications/vscode.nix
-    ../applications/ghostty
     ../applications/hyprland
     ../applications/neovim
     inputs.nixvim.homeManagerModules.nixvim
@@ -56,14 +52,6 @@
   home = {
     username = "lily";
     homeDirectory = "/home/lily";
-    packages = with pkgs; # installs a package
-      [
-        vesktop
-	inputs.zen-browser.packages."${system}".default
-        (prismlauncher.override {
-          jdks = [jdk23 jdk8 jdk17 jdk21];
-        })
-      ];
   };
 
   # Add stuff for your user as you see fit:

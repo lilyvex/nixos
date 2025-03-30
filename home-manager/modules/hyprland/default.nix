@@ -58,7 +58,7 @@ in {
           "$alt_super $super,Q,exit"
           # Screenshot region
           "$super SHIFT,S, exec, GRIM_DEFAULT_DIR=${config.home.homeDirectory}/Pictures/Screenshots/ ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" - | wl-copy "
-          "$super,T, exec, ghostty"
+          "$super,T, exec, kitty"
           "$super, L,exec, hyprlock --immediate"
           "$super, B,exec, chromium"
           "$super,F,fullscreen"

@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   imports = [
     ./main.nix
   ];
@@ -15,5 +15,7 @@
   };
   home.packages = with pkgs; [
     vesktop
+    inputs.zen-browser.packages."${system}".default
+    hyfetch
   ];
 }

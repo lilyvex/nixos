@@ -17,7 +17,7 @@ in {
         user = {
           name = "Lily Vex";
           email = "lesson085@gmail.com";
-          signingKey = "Placeholder";
+          signingKey = "Lily Vex";
         };
         commit.gpgsign = true;
         init.defaultBranch = "main";

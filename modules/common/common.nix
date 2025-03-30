@@ -12,7 +12,7 @@ in {
       enable = true;
       enableSSHSupport = true;
     };
-    services.openssh.enable = true;
+    services.openssh.enable = false;
     programs.zsh.enable = true;
     environment.systemPackages = with pkgs; [
       git
@@ -20,7 +20,6 @@ in {
       toybox
       util-linux
       tmux
-      ghostty
 
       # encryption and filesystem
       cryptsetup
