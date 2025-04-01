@@ -30,7 +30,7 @@ in {
             xray = true;
           };
         };
-        blurls = "waybar";
+        # blurls = "waybar";
         dwindle = {
           pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
           preserve_split = true; # You probably want this
@@ -40,8 +40,8 @@ in {
           extend_border_grab_area = 15; # Extends the clickable area around the border for resizing
           hover_icon_on_border = true; # Shows a cursor icon when
           layout = "dwindle";
-          "col.active_border" = "rgba(C55900ee) rgba(FFAA63ee) 45deg";
-          "col.inactive_border" = "rgba(595959aa)";
+          "col.active_border" = "rgba(3A2BABFF) rgba(1A0B8AFF) 45deg";
+          "col.inactive_border" = "rgba(110E29aa)";
           border_size = 2;
           gaps_out = 10;
         };
@@ -49,6 +49,7 @@ in {
           "${pkgs.kdePackages.kwallet-pam}/libexec/pam_kwallet_init"
           "${pkgs.networkmanagerapplet}/bin/nm-applet"
           "${pkgs.blueman}/bin/blueman-applet"
+          "${pkgs.waybar}/bin/waybar"
         ];
         "$super" = "SUPER";
         "$alt_super" = "CTRL";
@@ -59,8 +60,8 @@ in {
           # Screenshot region
           "$super SHIFT,S, exec, GRIM_DEFAULT_DIR=${config.home.homeDirectory}/Pictures/Screenshots/ ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" - | wl-copy "
           "$super,T, exec, kitty"
-          "$super, L,exec, hyprlock --immediate"
-          "$super, B,exec, chromium"
+          "$alt_super $super, L,exec, hyprlock --immediate"
+          "$super, B,exec, zen"
           "$super,F,fullscreen"
           "$super SHIFT,F,togglefloating"
           "$super,E,exec,kate"
@@ -93,10 +94,10 @@ in {
 
           "$super, J, togglesplit"
 
-          "$super, left, movefocus, l"
-          "$super, right, movefocus, r"
-          "$super, up, movefocus, u"
-          "$super, down, movefocus, d"
+          "$super, h, movefocus, l"
+          "$super, l, movefocus, r"
+          "$super, k, movefocus, u"
+          "$super, j, movefocus, d"
         ];
         bindm = [
           "$super, mouse:272, movewindow"

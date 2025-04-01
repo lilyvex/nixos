@@ -13,7 +13,7 @@ in {
       [
         wl-clipboard
         xwayland
-        xwaylandvideobridge
+        kdePackages.xwaylandvideobridge
         wayland-utils
         wev
       ]

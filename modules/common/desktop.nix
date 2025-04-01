@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   flake-self,
   ...
 }: let
@@ -29,6 +30,7 @@ in {
       envsubst
       glib
       headsetcontrol
+      flatpak
     ];
     networking = {
       networkmanager.enable = true;
@@ -68,7 +70,7 @@ in {
     };
 
     # services.printing.enable = true;
-    # services.flatpak.enable = true;
+    services.flatpak.enable = true;
     services.avahi = {
       enable = true;
       nssmdns4 = true;
@@ -78,5 +80,11 @@ in {
     # environment.sessionVariables = {
     #   MOZ_DISABLE_RDD_SANDBOX = "1";
     # };
+
+    programs.nix-ld.enable = true;
+    programs.nix-ld.libraries = with pkgs; [
+      # Add any missing dynamic libraries for unpackaged programs
+      # here, NOT in environment.systemPackages
+    ];
   };
 }

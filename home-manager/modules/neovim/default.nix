@@ -8,7 +8,7 @@
   cfg = config.lily.neovim;
 in {
   imports = [
-    #  ./colorscheme.nix
+    ./colorscheme.nix
     ./plugins
     ./keybinds.nix
   ];

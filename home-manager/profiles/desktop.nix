@@ -17,5 +17,11 @@
     vesktop
     inputs.zen-browser.packages."${system}".default
     hyfetch
+    
+    nerd-fonts.iosevka
+    nerd-fonts.space-mono
+    fira-sans
+
+    prismlauncher
   ];
 }

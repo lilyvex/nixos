@@ -1,0 +1,26 @@
+@define-color bar-bg rgba(0, 0, 0, 0);
+
+
+@define-color main-bg #dce0e8;
+@define-color main-fg #4c4f69;
+
+@define-color wb-act-bg #ccd0da;
+@define-color wb-act-fg #bcc0cc;
+
+@define-color wb-hvr-bg #acb0be;
+@define-color wb-hvr-fg #6cd0da;
+
+@define-color rosewater #dc8a78;
+@define-color flamingo #dd7878;
+@define-color pink #ea76cb;
+@define-color mauve #8839ef;
+@define-color red #d20f39;
+@define-color maroon #e64553;
+@define-color peach #fe640b;
+@define-color yellow #df8e1d;
+@define-color green #40a02b;
+@define-color teal #179299;
+@define-color sky #04a5e5;
+@define-color sapphire #209fb5;
+@define-color blue #1e66f5;
+@define-color lavender #7287fd;

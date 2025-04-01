@@ -18,13 +18,18 @@ in
         mainBar = {
           layer = "top";
           position = "top";
+          mode = "dock";
           height = 40;
-          # tray.icon-size = 15;
+          tray.icon-size = 15;
 
           modules-left = [
             "custom/icon"
             "custom/separator"
+            "cpu"
+            "memory"
+            "temperature"
             "battery"
+            "custom/separator"
             "custom/separator"
             "custom/screenshot"
             "tray"
@@ -36,6 +41,9 @@ in
             "mpris"
             "pulseaudio"
             "network"
+            "bluetooth"
+            "custom/wallchange"
+            "custom/themechange"
             "clock"
           ];
 
@@ -58,20 +66,39 @@ in
             on-click-middle = "playerctld shift";
           };
 
+          cpu = {
+            interval = 10;
+            format = " {usage}";
+            max-length = 10;
+          };
+
+          memory = {
+            interval = 30;
+            format = " {used:0.1f}G";
+            max-length = 10;
+          };
+
+          temperatures = {
+            thermal-zone = 0;
+            critical-threshold = 90;
+            format-critical = " {temperatureC}°C";
+            format = " {temperatureC}°C";
+          };
+
           battery = {
             interval = 30;
             states = {
               warning = 30;
               critical = 15;
             };
-            format = "{icon}  {capacity}%";
-            format-charging = "  {icon}  {capacity}%";
+            format = "{icon} {capacity}%";
+            format-charging = " {icon} {capacity}%";
             format-icons = [ " " " " " " " " ];
             max-length = 25;
           };
 
           pulseaudio = {
-            format = "{icon}  <b>{volume}</b>";
+            format = "{icon} <b>{volume}</b>";
             format-bluetooth = " ";
             format-bluetooth-muted = " ";
             format-muted = "";
@@ -82,14 +109,19 @@ in
           };
 
           network = {
-            format-wifi = "󰖩  {essid}";
+            format-wifi = "󰖩 {essid}";
             on-click = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor";
-            format-ethernet = "󰈀  wired";
+            format-ethernet = "󰈀 wired";
             format-disconnected = "";
             tooltip-format = "{ifname} via {gwaddr} ";
             tooltip-format-wifi = "{essid} ({signalStrength}%) ";
             tooltip-format-ethernet = "{ifname} ";
             tooltip-format-disconnected = "Disconnected";
+          };
+
+          bluetooth = {
+            tooltip = true;
+            on-click = "${pkgs.blueman}/bin/blueman-manager";
           };
 
           clock = {
@@ -109,6 +141,16 @@ in
           "custom/separator" = {
             format = " ";
           };
+
+          # "custom/wallchange" = {
+          #   format = "󰉼 {}";
+          #   tooltip = true;
+          #   exec = "echo ; echo 󰆊 switch wallpaper";
+          #   on-click = "${inputs.wall-utils.packages.${pkgs.system}.wall-utils}/bin/wall-utils next";
+          #   on-click-right = "${inputs.wall-utils.packages.${pkgs.system}.wall-utils}/bin/wall-utils previous";
+          #   on-click-middle = "${inputs.wall-utils.packages.${pkgs.system}.wall-utils}/bin/wall-utils select";
+          #   # interval = 3600; # once every day
+          # };
 
           "hyprland/workspaces" = {
             format = "<span color=\"#b4befe\">{icon}</span>"; # lavender
@@ -156,6 +198,6 @@ in
         };
       };
     };
-    # home.file.".config/waybar/themes/theme.css" = { source = ./themes/Catppuccin-Mocha.css; };
+    home.file.".config/waybar/themes/theme.css" = { source = ./themes/Catppuccin-Mocha.css; };
   };
 }
