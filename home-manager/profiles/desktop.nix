@@ -12,6 +12,7 @@
     neovim.enable = true;
     rofi.enable = true;
     waybar.enable = true;
+    vscode.enable = true;
   };
   home.packages = with pkgs; [
     vesktop
@@ -23,5 +24,11 @@
     fira-sans
 
     prismlauncher
+    element-desktop
+    mission-center
+
+    appimage-run
+
+    r2modman
   ];
 }

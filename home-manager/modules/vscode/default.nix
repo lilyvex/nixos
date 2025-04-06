@@ -15,7 +15,7 @@ in {
       enable = true;
       enableUpdateCheck = false;
       enableExtensionUpdateCheck = false;
-      mutableExtensionsDir = false;
+      mutableExtensionsDir = true;
       package = pkgs.vscode.overrideAttrs (attrs: {
         buildInputs = with pkgs;
           attrs.buildInputs
@@ -27,6 +27,7 @@ in {
           ];
       });
       extensions = with pkgs.vscode-extensions; [
+        github.github-vscode-theme
         github.copilot
         github.copilot-chat
         rust-lang.rust-analyzer
@@ -42,8 +43,6 @@ in {
         bierner.markdown-footnotes
         bierner.markdown-mermaid
         denoland.vscode-deno
-        ziglang.vscode-zig
-        #             geequlim.godot-tools
         gruntfuggly.todo-tree
         mhutchie.git-graph
         fill-labs.dependi
@@ -52,21 +51,14 @@ in {
         twxs.cmake
         llvm-vs-code-extensions.vscode-clangd
         mkhl.direnv
-        (pkgs.vscode-utils.buildVscodeMarketplaceExtension {
-          mktplcRef = {
-            name = "darcula-solid";
-            publisher = "jussiemion";
-            version = "1.2.1";
-            hash = "sha256-tIfCkOR1Z/uRWiZhrBfOQCZT3Cu6yNjAnxjn0UJFO2U=";
-          };
-        })
+        vscodevim.vim
       ];
 
       userSettings = {
         "editor.cursorSmoothCaretAnimation" = "on";
         "editor.smoothScrolling" = true;
         "editor.cursorBlinking" = "expand";
-        "workbench.colorTheme" = "Darcula Solid";
+        "workbench.colorTheme" = "GitHub Dark Default";
         "clangd.path" = "${pkgs.clang-tools}/bin/clangd";
         "clangd.arguments" = [
           "--clang-tidy"
@@ -77,7 +69,8 @@ in {
           "--all-scopes-completion"
         ];
         "editor.fontFamily" = "JetBrainsMono Nerd Font";
-        "zig.path" = "${pkgs.zls}/bin/zls";
+        "workbench.activityBar.location" = "top";
+        "window.menuBarVisibility" = "compact";
       };
     };
   };
