@@ -38,4 +38,9 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
   ];
+
+  home.sessionVariables = {
+    XCURSOR_THEME = "Breeze";
+    XCURSOR_SIZE = "24";
+  };
 }

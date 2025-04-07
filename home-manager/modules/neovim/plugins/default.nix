@@ -6,6 +6,7 @@
     ./gitsigns.nix
     ./tree.nix
     ./lsp
+    ./neocord.nix
     #    ./dap.nix
   ];
   programs.nixvim.plugins = {
