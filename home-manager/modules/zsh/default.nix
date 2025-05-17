@@ -22,6 +22,17 @@ in {
         nix-switch = "sudo nixos-rebuild switch --flake $HOME/.dotfiles";
         ls = "eza";
         cd = "z";
+        hyfetch = "hyfetch --args='--disable resolution bios network icons cursor --colors 7 4 4 2 2 7'";
+        gi = "git init";
+        ga = "git add";
+        gc = "git commit";
+        gf = "git fetch";
+        gpl = "git pull";
+        gp = "git push";
+        gb = "git checkout";
+        gcl = "git clone";
+        grb = "git rebase";
+        gm = "git merge";
       };
       syntaxHighlighting.enable = true;
 
