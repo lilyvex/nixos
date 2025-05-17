@@ -30,6 +30,8 @@
     appimage-run
 
     r2modman
+    gamemode
+    mangohud
   ];
 
   xdg.portal.enable = true;

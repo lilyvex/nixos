@@ -31,6 +31,7 @@
       docker = true;
     };
     nvidia.enable = true;
+    laptop.enable = true;
     desktop = {
       enable = true;
       hyprland.enable = true;
@@ -43,8 +44,9 @@
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
-      timeout = 0;
+      timeout = 5;
     };
+    supportedFilesystems = [ "ntfs" ];
     consoleLogLevel = 0;
     initrd.verbose = false;
     kernelPackages = pkgs.linuxPackages_lqx;

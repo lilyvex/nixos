@@ -31,6 +31,7 @@ in {
       glib
       headsetcontrol
       flatpak
+      ntfs3g
     ];
     networking = {
       networkmanager.enable = true;
