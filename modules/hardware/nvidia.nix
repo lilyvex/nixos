@@ -18,6 +18,9 @@ in {
       cudaPackages.cudatoolkit
       cudaPackages.cudnn
       cudaPackages.cutensor
+
+      asusctl
+      supergfxctl
     ];
     # environment.sessionVariables = lib.mkIf config.lily.wayland.enable {
     #   GBM_BACKEND = "nvidia-drm";

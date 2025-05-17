@@ -22,6 +22,7 @@ in {
 
     services = {
       libinput.enable = true;
+      asusd.enable = true;
     };
     systemd.sleep.extraConfig = ''
       AllowSuspend=yes

@@ -22,7 +22,7 @@
     ./hardware-configuration.nix
     ./hosts.nix
     # ../common.nix
-    # ./plymouth.nix
+    ./plymouth.nix
   ];
   lily = {
     users.lily.enable = true;
@@ -45,7 +45,7 @@
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
-      timeout = 5;
+      timeout = 0;
     };
     supportedFilesystems = [ "ntfs" ];
     consoleLogLevel = 0;
