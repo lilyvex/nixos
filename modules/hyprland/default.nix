@@ -36,7 +36,7 @@ in {
       withUWSM = true;
       systemd.setPath.enable = true;
     };
-    programs.waybar.enable = true;
+    programs.waybar.enable = false;
     services.blueman.enable = true;
 
     qt.enable = true;
