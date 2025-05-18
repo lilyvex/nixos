@@ -35,6 +35,7 @@
 
     obs-studio
     mpv
+    gparted
   ];
 
   xdg.portal.enable = true;
