@@ -7,11 +7,11 @@
     nix-direnv.enable = true;
   };
   lily = {
-    hyprland.enable = true;
+    hyprland.enable = false;
     kitty.enable = true;
     neovim.enable = true;
-    rofi.enable = true;
-    waybar.enable = true;
+    rofi.enable = false;
+    waybar.enable = false;
     vscode.enable = true;
   };
   home.packages = with pkgs; [
@@ -32,6 +32,9 @@
     r2modman
     gamemode
     mangohud
+
+    obs-studio
+    mpv
   ];
 
   xdg.portal.enable = true;
