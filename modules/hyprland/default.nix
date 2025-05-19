@@ -46,6 +46,8 @@ in {
       # KDE APPLICATIONS
       kdePackages.dolphin
       kdePackages.systemsettings
+      kdePackages.kalk
+      kdePackages.merkuro
 
       kdePackages.qtwayland
 

@@ -32,6 +32,7 @@
     r2modman
     gamemode
     mangohud
+    albert
 
     obs-studio
     mpv
