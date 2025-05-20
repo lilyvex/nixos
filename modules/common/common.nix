@@ -19,7 +19,6 @@ in {
       neovim
       toybox
       util-linux
-      tmux
 
       # encryption and filesystem
       cryptsetup

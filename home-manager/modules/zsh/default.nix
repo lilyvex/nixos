@@ -13,6 +13,11 @@ in {
     programs.zsh = {
       enable = true;
       autocd = true;
+      initContent = ''
+        if [ -z "$TMUX" ] && command -v tmux >/dev/null; then
+          exec tmux
+        fi
+      '';
       autosuggestion.enable = true;
       autosuggestion.strategy = [
         "completion"
@@ -73,7 +78,7 @@ in {
           style = "bg:red fg:crust";
 
           symbols = {
-            NixOS = " ";
+            NixOS = "";
           };
         };
 
@@ -87,8 +92,8 @@ in {
         directory = {
           style = "bg:peach fg:crust";
           format = "[ $path ]($style)";
-          truncation_length = 3;
-          truncation_symbol = "…/";
+          truncation_length = 1;
+          truncation_symbol = "";
 
           substitutions = {
             "Documents" = "󰈙 ";
@@ -100,7 +105,7 @@ in {
         };
 
         git_branch = {
-          symbol = " ";
+          symbol = "";
           style = "bg:yellow";
           format = "[[ $symbol $branch ](fg:crust bg:yellow)]($style)";
         };
