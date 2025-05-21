@@ -8,6 +8,7 @@
     ./lsp
     ./neocord.nix
     ./tmux-navigator.nix
+    ./dashboard.nix
     #    ./dap.nix
   ];
   programs.nixvim.plugins = {

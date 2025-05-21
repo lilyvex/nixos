@@ -27,6 +27,10 @@ in {
         byteCompileLua.enable = true;
         combinePlugins = {};
       };
+
+      extraConfigLua = ''
+        vim.opt.fillchars:append({ eob = " " })
+      '';
     };
   };
 }

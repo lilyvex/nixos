@@ -13,6 +13,10 @@ in {
     programs.zsh = {
       enable = true;
       autocd = true;
+      sessionVariables = {
+        EDITOR = "nvim";
+        MANPAGER = "nvim +Man!";
+      };
       initContent = ''
         if [ -z "$TMUX" ] && command -v tmux >/dev/null; then
           exec tmux
