@@ -30,6 +30,9 @@ in {
 
       extraConfigLua = ''
         vim.opt.fillchars:append({ eob = " " })
+        vim.o.cmdheight=0 
+        vim.opt.number = true
+        vim.opt.relativenumber = true
       '';
     };
   };

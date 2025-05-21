@@ -36,6 +36,9 @@
           notify = false;
           mini = false;
         };
+        custom_highlights = {
+          LineNr = { fg = "#a5adce"; };
+        };
       };
     };
   };

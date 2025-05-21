@@ -4,13 +4,13 @@
     settings = {
       options = {
         icons_enabled = true;
-        component_seperators = {
+        component_separators = {
           left = "|";
           right = "|";
         };
-        section_seperators = {
-          left = "";
-          right = "";
+        section_separators = {
+          left = "";
+          right = "";
         };
         disabled_filetypes.statusline = ["NvimTree" "alpha"];
         disabled_filetypes.winbar = ["NvimTree" "alpha"];
