@@ -7,7 +7,7 @@
     preferStartupRoot = false;
     syncRootWithCwd = true;
     view = {
-      side = "left";
+      side = "right";
       width = 30;
     };
     renderer.groupEmpty = true;

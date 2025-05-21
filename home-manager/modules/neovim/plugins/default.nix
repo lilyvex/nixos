@@ -9,6 +9,7 @@
     ./neocord.nix
     ./tmux-navigator.nix
     ./dashboard.nix
+    ./which-key.nix
     #    ./dap.nix
   ];
   programs.nixvim.plugins = {

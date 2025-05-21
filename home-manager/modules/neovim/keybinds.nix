@@ -11,7 +11,6 @@
         action = "<NOP>";
         options.silent = true;
       }
-
       {
         mode = "n";
         key = "<LEADER>,";
@@ -25,6 +24,15 @@
         options = {
           silent = true;
           desc = "[S]earch [F]iles";
+        };
+      }
+      {
+        mode = "n";
+        key = "<LEADER>tt";
+        action.__raw = "require('nvim-tree.api').tree.toggle";
+        options = {
+          silent = true;
+          desc = "[T]oggle [T]ree";
         };
       }
     ];
