@@ -27,6 +27,7 @@
   lily = {
     users.lily.enable = true;
     common.enable = true;
+    virtualisation.enable = true;
     containers = {
       enable = true;
       docker = true;
