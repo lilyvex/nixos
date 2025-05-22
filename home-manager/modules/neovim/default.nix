@@ -33,6 +33,18 @@ in {
         vim.o.cmdheight=0 
         vim.opt.number = true
         vim.opt.relativenumber = true
+        vim.opt.expandtab = false;
+        vim.opt.shiftwidth = 4;
+
+        vim.api.nvim_create_autocmd("FileType", {
+          pattern = { "cpp", "c", "hpp", "h" },
+          callback = function()
+            vim.bo.expandtab = false
+            vim.bo.shiftwidth = 4
+            vim.bo.tabstop = 4
+            vim.bo.softtabstop = 4
+          end,
+        })
       '';
     };
   };
