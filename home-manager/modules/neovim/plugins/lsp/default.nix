@@ -20,6 +20,23 @@
       autocmd BufRead,BufNewFile *.typ set filetype=typst
     augroup END
   '';
+  programs.nixvim.extraConfigLua = ''
+    local lspconfig = require("lspconfig")
+
+    lspconfig.clangd.setup({
+      on_attach = function(client, bufnr)
+        if client.server_capabilities.documentFormattingProvider then
+          vim.api.nvim_create_autocmd("BufWritePre", {
+            group = vim.api.nvim_create_augroup("FormatOnSave", { clear = true }),
+            buffer = bufnr,
+            callback = function()
+              vim.lsp.buf.format({ async = false })
+            end,
+          })
+        end
+      end,
+    })
+  '';
   programs.nixvim.plugins.lsp = {
     enable = true;
 
