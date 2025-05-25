@@ -39,6 +39,17 @@ in {
 
         run '~/.tmux/plugins/tmux/catppuccin.tmux'
 
+        set -sg terminal-overrides ",*:RGB"
+        set -g renumber-windows on
+        set -g escape-time 0
+        set -g pane-border-lines simple
+        set -g pane-border-style fg=white
+        set -g pane-active-border-style fg=white,bright
+
+        bind v split-window -h
+        bind s split-window -v
+        bind q kill-pane
+
         set -g status-right-length 100
         set -g status-left-length 100
         set -g status-left ""
