@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: let
   cfg = config.lily.kitty;
@@ -13,6 +14,10 @@ in {
     programs.kitty = {
       enable = true;
       themeFile = "Catppuccin-Mocha";
+      font = {
+        name = "ProFont IIx Nerd Font Mono";
+        package = pkgs.nerd-fonts.profont;
+      };
 
       settings = {
         confirm_os_window_close = 0;
