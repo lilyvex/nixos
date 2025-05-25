@@ -38,6 +38,7 @@
     obs-studio
     mpv
     gparted
+    cue
 
     keepassxc
   ];
