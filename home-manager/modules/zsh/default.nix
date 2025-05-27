@@ -28,7 +28,8 @@ in {
         "history"
       ];
       shellAliases = {
-        nix-switch = "sudo nixos-rebuild switch --flake $HOME/.dotfiles";
+        nix = "nom";
+        nix-switch = "sudo nixos-rebuild switch --flake $HOME/.dotfiles |& nom";
         ls = "eza";
         cd = "z";
         hyfetch = "hyfetch --args='--disable resolution bios network icons cursor --colors 7 4 4 2 2 7'";
