@@ -19,7 +19,6 @@
     vesktop
     inputs.zen-browser.packages."${system}".default
     hyfetch
-    nix-output-monitor
     
     nerd-fonts.iosevka
     nerd-fonts.space-mono
