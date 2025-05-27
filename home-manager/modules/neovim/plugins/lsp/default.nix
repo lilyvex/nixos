@@ -79,6 +79,7 @@
       glslls.enable = true;
       pyright.enable = true;
       nixd.enable = true;
+      gopls.enable = true;
       lua_ls = {
         enable = true;
         settings = {
