@@ -38,7 +38,7 @@
     obs-studio
     mpv
     gparted
-    lutris
+    bottles
 
     keepassxc
   ];
