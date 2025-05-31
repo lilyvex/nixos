@@ -33,7 +33,7 @@ in {
         cd = "z";
         hyfetch = "hyfetch --args='--disable resolution bios network icons cursor --colors 7 4 4 2 2 7'";
         gs = "git status";
-        gl = "git log --oneline";
+        gl = "git log --all --graph --pretty='%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09%C(Cyan)%an: %C(reset)%s %C(magenta)%d%C(reset)' --date=short -n 50";
         gi = "git init";
         ga = "git add";
         gc = "git commit";
