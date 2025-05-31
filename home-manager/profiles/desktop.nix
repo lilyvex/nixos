@@ -25,6 +25,7 @@
     fira-sans
 
     prismlauncher
+    satisfactorymodmanager
     element-desktop
     mission-center
 
