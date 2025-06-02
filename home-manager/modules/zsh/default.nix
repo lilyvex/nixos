@@ -44,6 +44,7 @@ in {
         gcl = "git clone";
         grb = "git rebase";
         gm = "git merge";
+        gwt = "git worktree";
       };
       syntaxHighlighting.enable = true;
 
