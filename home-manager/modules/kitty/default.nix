@@ -15,8 +15,8 @@ in {
       enable = true;
       themeFile = "Catppuccin-Mocha";
       font = {
-        name = "ProFont IIx Nerd Font Mono";
-        package = pkgs.nerd-fonts.profont;
+        name = "AtkynsonMono Nerd Font Mono";
+        package = pkgs.nerd-fonts.atkynson-mono;
       };
 
       settings = {
