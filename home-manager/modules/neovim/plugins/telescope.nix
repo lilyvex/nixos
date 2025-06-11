@@ -19,7 +19,6 @@
           "<C-d>" = false;
         };
         file_ignore_patters = {};
-        path_display = "smart";
         winblend = 0;
         border = {};
         borderchars = null;

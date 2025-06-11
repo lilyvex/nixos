@@ -23,21 +23,17 @@ in {
         tmuxPlugins.tmux-which-key
         tmuxPlugins.vim-tmux-navigator
         {
-          plugin = tmuxPlugins.catppuccin;
+          plugin = tmuxPlugins.tokyo-night-tmux;
           extraConfig = ''
-            set -g @catppuccin_flavor "mocha"
-            # set -g @catppuccin_window_status_style "rounded"
-            set -g status-bg default
-            set -g status-style bg=default
-
-            set -g @catppuccin_status_background "none"
+            set -g @tokyo-night-tmux_show_path 1
+            set -g @tokyo-night-tmux_path_format relative
+            set -g @tokyo-night-tmux_show_music 1
+            set -g @tokyo-night-tmux_show_datetime 0
           '';
         }
       ];
       extraConfig = ''
         set -g @plugin 'tmux-plugins/tpm'
-
-        run '~/.tmux/plugins/tmux/catppuccin.tmux'
 
         set -sg terminal-overrides ",*:RGB"
         set -g renumber-windows on
@@ -53,9 +49,6 @@ in {
         set -g status-right-length 100
         set -g status-left-length 100
         set -g status-left ""
-        set -g status-right "#{E:@catppuccin_status_application}"
-        set -ag status-right "#{E:@catppuccin_status_session}"
-        set -ag status-right "#{E:@catppuccin_status_uptime}"
 
         bind -n C-h if-shell "[[ $(tmux display -p '#{pane_current_command}') =~ (n?vim|nvim) ]]" "send-keys C-h" "select-pane -L"
         bind -n C-j if-shell "[[ $(tmux display -p '#{pane_current_command}') =~ (n?vim|nvim) ]]" "send-keys C-j" "select-pane -D"

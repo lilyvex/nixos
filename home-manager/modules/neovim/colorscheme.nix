@@ -1,6 +1,6 @@
 {...}: {
   programs.nixvim = {
-    colorschemes.catppuccin = {
+    colorschemes.tokyonight = {
       enable = true;
       settings = {
         flavour = "mocha";
@@ -11,12 +11,13 @@
         transparent_background = true;
         show_end_of_buffer = false;
         term_colors = false;
-        dim_inactive.enabled = false;
+        dim_inactive = false;
         no_italic = false;
         no_bold = false;
+        style = "night";
         styles = {
-          comments = ["italic"];
-          conditionals = ["italic"];
+          comments.italic = true;
+          conditionals.italic = true;
           loops = null;
           functions = null;
           keywords = null;
@@ -36,9 +37,9 @@
           notify = false;
           mini = false;
         };
-        custom_highlights = {
-          LineNr = { fg = "#a5adce"; };
-        };
+        # custom_highlights = {
+        #   LineNr = { fg = "#a5adce"; };
+        # };
       };
     };
   };

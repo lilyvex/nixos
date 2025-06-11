@@ -28,6 +28,15 @@
       }
       {
         mode = "n";
+        key = "<LEADER>sb";
+        action.__raw = "require('telescope.builtin').buffers";
+        options = {
+          silent = true;
+          desc = "[S]earch [B]uffers";
+        };
+      }
+      {
+        mode = "n";
         key = "<LEADER>tt";
         action.__raw = "require('nvim-tree.api').tree.toggle";
         options = {

@@ -9,8 +9,8 @@
           right = "|";
         };
         section_separators = {
-          left = "";
-          right = "";
+          left = "";
+          right = "";
         };
         disabled_filetypes.statusline = ["NvimTree" "alpha"];
         disabled_filetypes.winbar = ["NvimTree" "alpha"];

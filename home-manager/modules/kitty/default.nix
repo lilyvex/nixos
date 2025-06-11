@@ -13,7 +13,7 @@ in {
   config = lib.mkIf cfg.enable {
     programs.kitty = {
       enable = true;
-      themeFile = "Catppuccin-Mocha";
+      themeFile = "tokyo_night_night";
       font = {
         name = "AtkynsonMono Nerd Font Mono";
         package = pkgs.nerd-fonts.atkynson-mono;
