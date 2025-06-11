@@ -44,9 +44,15 @@
 
   boot = {
     loader = {
-      systemd-boot.enable = true;
+      grub = {
+        enable = true;
+        useOSProber = true;
+        efiSupport = true;
+        device = "nodev";
+        configurationLimit = 15;
+      };
       efi.canTouchEfiVariables = true;
-      timeout = 0;
+      timeout = 5;
     };
     supportedFilesystems = [ "ntfs" ];
     consoleLogLevel = 0;
