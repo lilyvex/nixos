@@ -14,7 +14,7 @@
         };
         disabled_filetypes.statusline = ["NvimTree" "alpha"];
         disabled_filetypes.winbar = ["NvimTree" "alpha"];
-        theme = null;
+        theme = "tokyonight";
       };
     };
   };

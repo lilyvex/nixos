@@ -21,10 +21,10 @@ in {
 
       settings = {
         confirm_os_window_close = 0;
-	window_padding_width = 0;
-        # background_opacity = "0.45";
-        # background_blur = 1;
-        # dynamic_background_opacity = "yes";
+        window_padding_width = 0;
+        background_opacity = "0.65";
+        background_blur = 1;
+        dynamic_background_opacity = "yes";
       };
     };
   };

@@ -3,12 +3,7 @@
     colorschemes.tokyonight = {
       enable = true;
       settings = {
-        flavour = "mocha";
-        background = {
-          light = "latte";
-          dark = "mocha";
-        };
-        transparent_background = true;
+        transparent = true;
         show_end_of_buffer = false;
         term_colors = false;
         dim_inactive = false;
@@ -18,6 +13,8 @@
         styles = {
           comments.italic = true;
           conditionals.italic = true;
+          sidebars = "transparent";
+          floats = "transparent";
           loops = null;
           functions = null;
           keywords = null;
@@ -37,9 +34,6 @@
           notify = false;
           mini = false;
         };
-        # custom_highlights = {
-        #   LineNr = { fg = "#a5adce"; };
-        # };
       };
     };
   };
