@@ -329,7 +329,6 @@ window-rule {
 
 hotkey-overlay {
     skip-at-startup
-    hide-not-bound
 }
 
 binds {
