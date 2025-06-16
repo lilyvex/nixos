@@ -11,13 +11,13 @@ in {
   options.lily.desktop = {
     enable = lib.mkEnableOption "activate desktop";
     plasma.enable = lib.mkEnableOption "activate plasma desktop environment";
-    hyprland.enable = lib.mkEnableOption "activate hyprland desktop";
+    niri.enable = lib.mkEnableOption "activate niri desktop";
   };
 
   config = lib.mkIf cfg.enable {
     lily = {
       plasma.enable = cfg.plasma.enable;
-      hyprland.enable = cfg.hyprland.enable;
+      niri.enable = cfg.niri.enable;
     };
     programs = {
       dconf.enable = true;

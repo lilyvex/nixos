@@ -20,7 +20,6 @@
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
-    ./hosts.nix
     # ../common.nix
     ./plymouth.nix
   ];
@@ -36,7 +35,7 @@
     laptop.enable = true;
     desktop = {
       enable = true;
-      hyprland.enable = true;
+      niri.enable = true;
       plasma.enable = true;
     };
   };

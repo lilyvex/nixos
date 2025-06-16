@@ -80,6 +80,7 @@
       pyright.enable = true;
       nixd.enable = true;
       gopls.enable = true;
+      qmlls.enable = true;
       lua_ls = {
         enable = true;
         settings = {

@@ -7,11 +7,12 @@
     nix-direnv.enable = true;
   };
   lily = {
-    hyprland.enable = false;
+    niri.enable = true;
+    niriswitcher.enable = true;
+    rofi.enable = true;
+    quickshell.enable = true;
     kitty.enable = true;
     neovim.enable = true;
-    rofi.enable = false;
-    waybar.enable = false;
     vscode.enable = true;
     tmux.enable = true;
   };

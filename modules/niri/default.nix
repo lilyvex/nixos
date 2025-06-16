@@ -5,10 +5,10 @@
   inputs,
   ...
 }: let
-  cfg = config.lily.hyprland;
+  cfg = config.lily.niri;
 in {
-  options.lily.hyprland = {
-    enable = lib.mkEnableOption "activate hyprland";
+  options.lily.niri = {
+    enable = lib.mkEnableOption "activate niri";
   };
   config = lib.mkIf cfg.enable {
     lily = {
@@ -31,12 +31,7 @@ in {
       ];
     };
 
-    programs.hyprland = {
-      enable = true;
-      withUWSM = true;
-      systemd.setPath.enable = true;
-    };
-    programs.waybar.enable = false;
+    programs.niri.enable = true;
     services.blueman.enable = true;
 
     qt.enable = true;
@@ -89,8 +84,8 @@ in {
       plasma5Packages.kwayland-integration
     ];
     environment.sessionVariables = {
-      XDG_CURRENT_DESKTOP = "Hyprland";
-      XDG_SESSION_DESKTOP = "Hyprland";
+      XDG_CURRENT_DESKTOP = "niri";
+      XDG_SESSION_DESKTOP = "niri";
       KPACKAGE_DEP_RESOLVERS_PATH = "${pkgs.kdePackages.frameworkintegration.out}/libexec/kf6/kpackagehandlers";
     };
     services.udisks2.enable = true;

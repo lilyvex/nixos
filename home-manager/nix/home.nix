@@ -19,7 +19,6 @@
     ../applications/git.nix
     ../applications/zsh.nix
     ../applications/direnv.nix
-    ../applications/hyprland
     ../applications/neovim
     inputs.nixvim.homeManagerModules.nixvim
   ];
