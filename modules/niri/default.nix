@@ -34,6 +34,11 @@ in {
     programs.niri.enable = true;
     services.blueman.enable = true;
 
+    xdg.portal.enable = true;
+    xdg.portal.extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+    ];
+
     qt.enable = true;
     qt.platformTheme = "kde";
 
