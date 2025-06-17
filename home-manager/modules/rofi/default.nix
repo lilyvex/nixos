@@ -16,5 +16,11 @@ in {
       enable = true;
       plugins = [pkgs.rofi-calc];
     };
+
+    home.file.".config/rofi" = {
+      source = ./config;
+      recursive = true;
+      force = true;
+    };
   };
 }
