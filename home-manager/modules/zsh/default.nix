@@ -17,11 +17,6 @@ in {
         EDITOR = "nvim";
         MANPAGER = "nvim +Man!";
       };
-      initContent = ''
-        if [ -z "$TMUX" ] && command -v tmux >/dev/null; then
-          exec tmux
-        fi
-      '';
       autosuggestion.enable = true;
       autosuggestion.strategy = [
         "completion"

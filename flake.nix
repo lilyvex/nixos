@@ -16,7 +16,6 @@
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
     nix-gaming.url = "github:fufexan/nix-gaming";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    quickshell.url = "github:quickshell-mirror/quickshell";
   };
 
   outputs = {

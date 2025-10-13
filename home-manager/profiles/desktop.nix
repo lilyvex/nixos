@@ -26,8 +26,6 @@
     fira-sans
 
     prismlauncher
-    satisfactorymodmanager
-    element-desktop
     mission-center
 
     appimage-run
@@ -35,25 +33,25 @@
     r2modman
     gamemode
     mangohud
-    thunderbird
 
     obs-studio
     mpv
     gparted
-    bottles
 
     keepassxc
+
+    jetbrains.clion
+    jetbrains.rust-rover
+    jetbrains.webstorm
   ];
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = with pkgs; [
-    kdePackages.xdg-desktop-portal-kde
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gnome
   ];
 
   home.sessionVariables = {
-    XCURSOR_THEME = "Breeze";
+    XCURSOR_THEME = "Adwaita";
     XCURSOR_SIZE = "24";
   };
 }

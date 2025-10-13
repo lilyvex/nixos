@@ -13,7 +13,7 @@ in {
       home = "/home/lily";
       isNormalUser = true;
       #   hashedPasswordFile = lib.mkIf config.lily.sops config.sops.secrets."users/lily/hashedPassword".path;
-      extraGroups = ["wheel" "openrazer" "docker"] ++ lib.optionals config.networking.networkmanager.enable ["networkmanager"];
+      extraGroups = ["wheel" "docker"] ++ lib.optionals config.networking.networkmanager.enable ["networkmanager"];
       shell = pkgs.zsh;
     };
     # sops.secrets."users/lily/hashedPassword" = lib.mkIf config.lily.sops { neededForUsers = true; };

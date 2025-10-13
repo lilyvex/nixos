@@ -39,6 +39,8 @@ in {
       fd
       file
       tree
+
+      btrfs-progs
     ];
     environment.shells = with pkgs; [zsh];
   };
