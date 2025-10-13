@@ -29,6 +29,7 @@ in {
       headsetcontrol
       flatpak
       ntfs3g
+      adw-gtk3
     ];
     networking = {
       networkmanager.enable = true;
