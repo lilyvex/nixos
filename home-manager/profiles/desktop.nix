@@ -43,6 +43,7 @@
     gnome-tweaks
 
     imagemagick
+    brightnessctl
   ];
 
   xdg.portal.enable = true;
