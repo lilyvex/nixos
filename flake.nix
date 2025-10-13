@@ -24,7 +24,6 @@
     home-manager,
     agenix,
     nixvim,
-    quickshell,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -60,7 +59,7 @@
       ]
     );
 
-    homeManagerModules =
+    homeModules =
       builtins.listToAttrs
       (
         map
@@ -73,9 +72,9 @@
       // {
         nix = {pkgs, ...}: {
           imports = [
-            inputs.nixvim.homeManagerModules.nixvim
-            # inputs.plasma-manager.homeManagerModules.plasma-manager
-            # inputs.wall-utils.homeManagerModules.wall-utils
+            inputs.nixvim.homeModules.nixvim
+            # inputs.plasma-manager.homeModules.plasma-manager
+            # inputs.wall-utils.homeModules.wall-utils
           ];
         };
       };
@@ -119,7 +118,7 @@
           [
             ./home-manager/profiles/desktop.nix
           ]
-          ++ builtins.attrValues self.homeManagerModules;
+          ++ builtins.attrValues self.homeModules;
       };
     };
   };

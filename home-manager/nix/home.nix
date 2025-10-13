@@ -9,10 +9,10 @@
   # You can import other home-manager modules here
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
-    # outputs.homeManagerModules.example
+    # outputs.homeModules.example
 
     # Or modules exported from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModules.default
+    # inputs.nix-colors.homeModules.default
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
@@ -20,7 +20,7 @@
     ../applications/zsh.nix
     ../applications/direnv.nix
     ../applications/neovim
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
   ];
 
   nixpkgs = {

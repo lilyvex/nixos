@@ -7,7 +7,7 @@
 }: let
   cfg = config.lily.gnome;
 in {
-  options.lily.plasma.enable = lib.mkEnableOption "activate gnome";
+  options.lily.gnome.enable = lib.mkEnableOption "activate gnome";
   config = lib.mkIf cfg.enable {
     services = {
       displayManager.gdm = {

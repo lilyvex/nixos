@@ -10,18 +10,15 @@
 in {
   options.lily.desktop = {
     enable = lib.mkEnableOption "activate desktop";
-    plasma.enable = lib.mkEnableOption "activate plasma desktop environment";
-    niri.enable = lib.mkEnableOption "activate niri desktop";
+    gnome.enable = lib.mkEnableOption "activate gnome desktop environment";
   };
 
   config = lib.mkIf cfg.enable {
     lily = {
-      plasma.enable = cfg.plasma.enable;
-      niri.enable = cfg.niri.enable;
+      gnome.enable = cfg.gnome.enable;
     };
     programs = {
       dconf.enable = true;
-      kdeconnect.enable = true;
     };
     environment.systemPackages = with pkgs; [
       vulkan-tools

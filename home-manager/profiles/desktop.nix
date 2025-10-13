@@ -7,14 +7,9 @@
     nix-direnv.enable = true;
   };
   lily = {
-    niri.enable = true;
-    niriswitcher.enable = true;
-    rofi.enable = true;
-    quickshell.enable = true;
     kitty.enable = true;
     neovim.enable = true;
     vscode.enable = true;
-    tmux.enable = true;
   };
   home.packages = with pkgs; [
     vesktop
@@ -43,9 +38,15 @@
     jetbrains.clion
     jetbrains.rust-rover
     jetbrains.webstorm
+
+    gnome-extension-manager
+    gnome-tweaks
+
+    imagemagick
   ];
 
   xdg.portal.enable = true;
+  xdg.portal.config.common.default = "*";
   xdg.portal.extraPortals = with pkgs; [
     xdg-desktop-portal-gnome
   ];
