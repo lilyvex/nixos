@@ -16,7 +16,7 @@ in {
       extraConfig = {
         user = {
           name = "lily";
-          email = "contact@lilyvex.dev";
+          email = "lesson085@gmail.com";
           signingKey = "Lily Vex";
         };
         commit.gpgsign = true;
