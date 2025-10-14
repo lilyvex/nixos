@@ -59,6 +59,7 @@
     kernelParams = [
       "quiet"
       "splash"
+      "acpi_backlight=video"
     ];
   };
 

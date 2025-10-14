@@ -7,6 +7,7 @@
     nix-direnv.enable = true;
   };
   lily = {
+    emacs.enable = true;
     kitty.enable = true;
     neovim.enable = true;
     vscode.enable = true;
