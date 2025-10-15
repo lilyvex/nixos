@@ -8,11 +8,11 @@
   };
   lily = {
     emacs.enable = true;
-    kitty.enable = true;
     neovim.enable = true;
     vscode.enable = true;
   };
   home.packages = with pkgs; [
+    blackbox-terminal
     vesktop
     inputs.zen-browser.packages."${system}".default
     hyfetch
