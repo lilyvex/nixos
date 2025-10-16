@@ -30,7 +30,6 @@
     gamemode
     mangohud
 
-    obs-studio
     mpv
     gparted
 
