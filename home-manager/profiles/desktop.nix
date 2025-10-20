@@ -44,6 +44,8 @@
 
     imagemagick
     brightnessctl
+
+    weechat
   ];
 
   xdg.portal.enable = true;
